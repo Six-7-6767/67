@@ -296,15 +296,17 @@ local script = SixSeven["a"];
 	local sixseven = Color3.fromRGB(152, 152, 152)
 	button.TextColor3 = sixseven
 	
-	local UserInputService = game:GetService("UserInputService")
-	local Event = game:GetService("ReplicatedStorage").Network.Comms.Input
+	local Players = game:GetService("Players")
+	local CuffAction = game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("CuffAction")
 	
 	local function onButtonClicked()
 		isActive = not isActive
 	
 		if isActive then
 			button.TextColor3 = sixseven2
-			game:GetService("ReplicatedStorage").Events.CuffAction:FireServer("ForceUncuff", 12910897166)
+			local player = Players.LocalPlayer
+			local timeValue = math.floor(workspace:GetServerTimeNow() + player.UserId)
+			CuffAction:FireServer("ForceUncuff", timeValue)
 			wait(0.1)
 			button.TextColor3 = sixseven
 			isActive = not isActive
