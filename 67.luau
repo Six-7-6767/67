@@ -7,7 +7,7 @@ db   8D   .88.   .8P  Y8.        db   8D 88.      `8bd8'  88.     88  V888
 `8888Y' Y888888P YP    YP        `8888Y' Y88888P    YP    Y88888P VP   V8P    (Six-Seven)
 ]]--
 
--- Instances: 24 | Scripts: 9 | Modules: 0 | Tags: 0
+-- Instances: 27 | Scripts: 10 | Modules: 0 | Tags: 0
 local SixSeven = {};
 
 -- StarterGui.ScreenGui
@@ -40,7 +40,6 @@ SixSeven["5"] = Instance.new("ScrollingFrame", SixSeven["2"]);
 SixSeven["5"]["Active"] = true;
 SixSeven["5"]["BorderSizePixel"] = 0;
 SixSeven["5"]["CanvasSize"] = UDim2.new(0, 0, 0, 380);
-SixSeven["5"]["CanvasPosition"] = Vector2.new(0, 180);
 SixSeven["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
 SixSeven["5"]["Size"] = UDim2.new(1, 0, 0.8, 0);
 SixSeven["5"]["ScrollBarImageColor3"] = Color3.fromRGB(75, 75, 75);
@@ -77,7 +76,7 @@ SixSeven["8"] = Instance.new("LocalScript", SixSeven["7"]);
 
 
 
--- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Uncuff WIP
+-- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Uncuff
 SixSeven["9"] = Instance.new("TextButton", SixSeven["5"]);
 SixSeven["9"]["TextWrapped"] = true;
 SixSeven["9"]["BorderSizePixel"] = 0;
@@ -90,10 +89,10 @@ SixSeven["9"]["BackgroundTransparency"] = 1;
 SixSeven["9"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
 SixSeven["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
 SixSeven["9"]["Text"] = [[Uncuff]];
-SixSeven["9"]["Name"] = [[Uncuff WIP]];
+SixSeven["9"]["Name"] = [[Uncuff]];
 
 
--- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Uncuff WIP.LocalScript
+-- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Uncuff.LocalScript
 SixSeven["a"] = Instance.new("LocalScript", SixSeven["9"]);
 
 
@@ -199,34 +198,60 @@ SixSeven["14"] = Instance.new("LocalScript", SixSeven["13"]);
 
 
 
--- StarterGui.ScreenGui.TitleBar
-SixSeven["15"] = Instance.new("TextButton", SixSeven["1"]);
+-- StarterGui.ScreenGui.SixSeven.DebugButton (Temporary)
+SixSeven["15"] = Instance.new("TextButton", SixSeven["2"]);
 SixSeven["15"]["TextWrapped"] = true;
 SixSeven["15"]["BorderSizePixel"] = 0;
 SixSeven["15"]["TextSize"] = 14;
 SixSeven["15"]["TextScaled"] = true;
-SixSeven["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["15"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["15"]["Size"] = UDim2.new(0.15664, 0, 0.08681, 0);
+SixSeven["15"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+SixSeven["15"]["Size"] = UDim2.new(0.835, 0, 0.268, 0);
 SixSeven["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["15"]["Text"] = [[Six-Seven]];
-SixSeven["15"]["Name"] = [[TitleBar]];
-SixSeven["15"]["Position"] = UDim2.new(0.64534, 0, 0.24479, 0);
+SixSeven["15"]["Text"] = [[Close]];
+SixSeven["15"]["Name"] = [[DebugButton (Temporary)]];
+SixSeven["15"]["Position"] = UDim2.new(-2.31, 0, -0.184, 0);
 
 
--- StarterGui.ScreenGui.TitleBar.UICorner
+-- StarterGui.ScreenGui.SixSeven.DebugButton (Temporary).UICorner
 SixSeven["16"] = Instance.new("UICorner", SixSeven["15"]);
 
 
 
--- StarterGui.ScreenGui.TitleBar.CloseButton
+-- StarterGui.ScreenGui.SixSeven.DebugButton (Temporary).LocalScript
 SixSeven["17"] = Instance.new("LocalScript", SixSeven["15"]);
-SixSeven["17"]["Name"] = [[CloseButton]];
+
+
+
+-- StarterGui.ScreenGui.TitleBar
+SixSeven["18"] = Instance.new("TextButton", SixSeven["1"]);
+SixSeven["18"]["TextWrapped"] = true;
+SixSeven["18"]["BorderSizePixel"] = 0;
+SixSeven["18"]["TextSize"] = 14;
+SixSeven["18"]["TextScaled"] = true;
+SixSeven["18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["18"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["18"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SixSeven["18"]["Size"] = UDim2.new(0.15664, 0, 0.08681, 0);
+SixSeven["18"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["18"]["Text"] = [[Six-Seven]];
+SixSeven["18"]["Name"] = [[TitleBar]];
+SixSeven["18"]["Position"] = UDim2.new(0.64534, 0, 0.24479, 0);
+
+
+-- StarterGui.ScreenGui.TitleBar.UICorner
+SixSeven["19"] = Instance.new("UICorner", SixSeven["18"]);
+
+
+
+-- StarterGui.ScreenGui.TitleBar.CloseButton
+SixSeven["1a"] = Instance.new("LocalScript", SixSeven["18"]);
+SixSeven["1a"]["Name"] = [[CloseButton]];
 
 
 -- StarterGui.ScreenGui.TitleBar.LocalScript
-SixSeven["18"] = Instance.new("LocalScript", SixSeven["15"]);
+SixSeven["1b"] = Instance.new("LocalScript", SixSeven["18"]);
 
 
 
@@ -239,12 +264,22 @@ local script = SixSeven["8"];
 	local sixseven = Color3.fromRGB(152, 152, 152)
 	button.TextColor3 = sixseven
 	
-	local text67Write = "Hello! This is a placeholder. Change me to your actual text!"
-	local waitTime = 0.5 -- you can change this
-	
+	local waitTime = 0.5 -- delay
 	local UserInputService = game:GetService("UserInputService")
 	local Event = game:GetService("ReplicatedStorage").Network.Comms.Input
+	local Players = game:GetService("Players")
+	local localPlayer = Players.LocalPlayer
 	
+	local lastMessage = nil
+	
+	Event.OnClientEvent:Connect(function(formattedText, rawMessage, sender)
+		if sender == localPlayer then
+			if not isActive then
+				lastMessage = rawMessage
+			end
+		end
+	end)
+	-- rng
 	local function generateRandomLetters(length)
 		local letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 		local result = ""
@@ -255,39 +290,43 @@ local script = SixSeven["8"];
 		return result
 	end
 	
-	local function onButtonClicked()
+	button.MouseButton1Click:Connect(function()
 		isActive = not isActive
 	
 		if isActive then
-			button.TextColor3 = sixseven2
+			if lastMessage then
+				button.TextColor3 = sixseven2
 	
-			task.spawn(function()
-				while isActive do
-					local randomLength = math.random(10, 15)
-					local randomLetters = generateRandomLetters(randomLength)
+				task.spawn(function()
+					while isActive do
+						local randomLength = math.random(10, 15)
+						local randomLetters = generateRandomLetters(randomLength)
 	
-					Event:FireServer(text67Write .. " " .. randomLetters)
+						Event:FireServer(lastMessage .. " " .. randomLetters)
 	
-					task.wait(waitTime)
-	
-					if UserInputService:IsKeyDown(Enum.KeyCode.N) then
-						warn("Loop broken")
-						isActive = false
-						button.TextColor3 = sixseven
-						break
+						task.wait(waitTime)
+						--[[
+						if UserInputService:IsKeyDown(Enum.KeyCode.N) then
+							warn("Loop broken")
+							isActive = false
+							button.TextColor3 = sixseven
+							break
+						end
+						]]--
 					end
-				end
-			end)
-	
+				end)
+			else
+				Event:FireServer("You didn't write anything yet.")
+				isActive = false      -- don't start the loop
+				button.TextColor3 = sixseven
+			end
 		else
 			button.TextColor3 = sixseven
 		end
-	end
-	
-	button.MouseButton1Click:Connect(onButtonClicked)
+	end)
 end;
 task.spawn(C_8);
--- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Uncuff WIP.LocalScript
+-- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Uncuff.LocalScript
 local function C_a()
 local script = SixSeven["a"];
 	local button = script.Parent
@@ -296,17 +335,15 @@ local script = SixSeven["a"];
 	local sixseven = Color3.fromRGB(152, 152, 152)
 	button.TextColor3 = sixseven
 	
-	local Players = game:GetService("Players")
-	local CuffAction = game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("CuffAction")
+	local UserInputService = game:GetService("UserInputService")
+	local Event = game:GetService("ReplicatedStorage").Network.Comms.Input
 	
 	local function onButtonClicked()
 		isActive = not isActive
 	
 		if isActive then
 			button.TextColor3 = sixseven2
-			local player = Players.LocalPlayer
-			local timeValue = math.floor(workspace:GetServerTimeNow() + player.UserId)
-			CuffAction:FireServer("ForceUncuff", timeValue)
+			game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("CuffAction"):FireServer("ForceUncuff", math.floor(workspace:GetServerTimeNow() + game.Players.LocalPlayer.UserId))
 			wait(0.1)
 			button.TextColor3 = sixseven
 			isActive = not isActive
@@ -325,35 +362,74 @@ local script = SixSeven["c"];
 	local isActive = false
 	local sixseven2 = Color3.fromRGB(228, 228, 228)
 	local sixseven = Color3.fromRGB(152, 152, 152)
-	
 	button.TextColor3 = sixseven
 	
 	local Players = game:GetService("Players")
 	local localPlayer = Players.LocalPlayer
+	
+	local function simulateJump()
+		local success = false
+		local vu = game:GetService("VirtualUser")
+		if vu then
+			pcall(function()
+				vu:CaptureController()
+				vu:Button2Down(Vector2.new(0,0), Enum.UserInputState.Begin)
+				task.wait(0.05)
+				vu:Button2Up(Vector2.new(0,0), Enum.UserInputState.End)
+				success = true
+			end)
+		end
+		return success
+	end
+	
+	local function jumpFallback()
+		local char = localPlayer.Character
+		local hum = char and char:FindFirstChildOfClass("Humanoid")
+		if hum and hum.Health > 0 then
+			hum.Jump = true
+			return true
+		end
+		return false
+	end
+	
+	local function doJump()
+		if not simulateJump() then
+			jumpFallback()
+		end
+	end
+	
+	local function waitForCharacter()
+		local char = localPlayer.Character
+		if not char then
+			char = localPlayer.CharacterAdded:Wait()
+		end
+		return char
+	end
 	
 	local function onButtonClicked()
 		isActive = not isActive
 	
 		if isActive then
 			button.TextColor3 = sixseven2
+			local char = waitForCharacter()
+			if not char then
+				isActive = false
+				button.TextColor3 = sixseven
+				return
+			end
+			
 			task.spawn(function()
 				while isActive do
-					local character = localPlayer.Character
-					local humanoid = character and character:FindFirstChildOfClass("Humanoid")
-					if humanoid and humanoid.Health > 0 then
-						humanoid.Jump = true
-					end
-					task.wait(1) 
+					doJump()
+					task.wait(math.random(10, 60))  -- adjust for desired speed
 				end
 			end)
-	
 		else
 			button.TextColor3 = sixseven
 		end
 	end
 	
 	button.MouseButton1Click:Connect(onButtonClicked)
-	
 end;
 task.spawn(C_c);
 -- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Button.LocalScript
@@ -532,9 +608,23 @@ local script = SixSeven["14"];
 	
 end;
 task.spawn(C_14);
--- StarterGui.ScreenGui.TitleBar.CloseButton
+-- StarterGui.ScreenGui.SixSeven.DebugButton (Temporary).LocalScript
 local function C_17()
 local script = SixSeven["17"];
+	local Button = script.Parent
+	local Frame = Button.Parent
+	local GUI = Frame.Parent
+	
+	local function _Destroy()
+		GUI:Destroy()
+	end
+	
+	Button.MouseButton1Click:Connect(_Destroy)
+end;
+task.spawn(C_17);
+-- StarterGui.ScreenGui.TitleBar.CloseButton
+local function C_1a()
+local script = SixSeven["1a"];
 	local UserInputService = game:GetService("UserInputService")
 	
 	local button = script.Parent
@@ -602,12 +692,12 @@ local script = SixSeven["17"];
 	end)
 	
 end;
-task.spawn(C_17);
+task.spawn(C_1a);
 -- StarterGui.ScreenGui.TitleBar.LocalScript
-local function C_18()
-local script = SixSeven["18"];
+local function C_1b()
+local script = SixSeven["1b"];
 	
 end;
-task.spawn(C_18);
+task.spawn(C_1b);
 
 return SixSeven["1"], require;
