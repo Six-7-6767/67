@@ -7,7 +7,7 @@ db   8D   .88.   .8P  Y8.        db   8D 88.      `8bd8'  88.     88  V888
 `8888Y' Y888888P YP    YP        `8888Y' Y88888P    YP    Y88888P VP   V8P    (Six-Seven)
 ]]--
 
--- Instances: 27 | Scripts: 10 | Modules: 0 | Tags: 0
+-- Instances: 26 | Scripts: 9 | Modules: 0 | Tags: 0
 local SixSeven = {};
 
 -- StarterGui.ScreenGui
@@ -118,7 +118,7 @@ SixSeven["c"] = Instance.new("LocalScript", SixSeven["b"]);
 
 
 
--- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Button
+-- StarterGui.ScreenGui.SixSeven.ScrollingFrame.RedeemCodes
 SixSeven["d"] = Instance.new("TextButton", SixSeven["5"]);
 SixSeven["d"]["TextWrapped"] = true;
 SixSeven["d"]["BorderSizePixel"] = 0;
@@ -130,10 +130,11 @@ SixSeven["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], 
 SixSeven["d"]["BackgroundTransparency"] = 1;
 SixSeven["d"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
 SixSeven["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["d"]["Name"] = [[Button]];
+SixSeven["d"]["Text"] = [[Promocode]];
+SixSeven["d"]["Name"] = [[RedeemCodes]];
 
 
--- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Button.LocalScript
+-- StarterGui.ScreenGui.SixSeven.ScrollingFrame.RedeemCodes.LocalScript
 SixSeven["e"] = Instance.new("LocalScript", SixSeven["d"]);
 
 
@@ -248,11 +249,6 @@ SixSeven["19"] = Instance.new("UICorner", SixSeven["18"]);
 -- StarterGui.ScreenGui.TitleBar.CloseButton
 SixSeven["1a"] = Instance.new("LocalScript", SixSeven["18"]);
 SixSeven["1a"]["Name"] = [[CloseButton]];
-
-
--- StarterGui.ScreenGui.TitleBar.LocalScript
-SixSeven["1b"] = Instance.new("LocalScript", SixSeven["18"]);
-
 
 
 -- StarterGui.ScreenGui.SixSeven.ScrollingFrame.SpamChat.LocalScript
@@ -432,48 +428,104 @@ local script = SixSeven["c"];
 	button.MouseButton1Click:Connect(onButtonClicked)
 end;
 task.spawn(C_c);
--- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Button.LocalScript
+-- StarterGui.ScreenGui.SixSeven.ScrollingFrame.RedeemCodes.LocalScript
 local function C_e()
 local script = SixSeven["e"];
 	local button = script.Parent
-	local isActive = false
-	local sixseven2 = Color3.fromRGB(228, 228, 228)
-	local sixseven = Color3.fromRGB(152, 152, 152)
-	button.TextColor3 = sixseven
+	
+	local OFF_COLOR = Color3.fromRGB(152, 152, 152)
+	local ON_COLOR  = Color3.fromRGB(228, 228, 228)
+	
+	button.TextColor3 = OFF_COLOR
+	
+	local running = false
+	local stopRequested = false
+	
+	local function pulseColor()
+		if button.TextColor3 == OFF_COLOR then
+			button.TextColor3 = ON_COLOR
+		else
+			button.TextColor3 = OFF_COLOR
+		end
+	end
+	
+	local function startRedeem()
+		running = true
+		stopRequested = false
+		
+		task.spawn(function()
+			button.TextColor3 = ON_COLOR
+			
+			task.spawn(function()
+				while running and not stopRequested do
+					task.wait(0.5)
+					if running and not stopRequested then
+						pulseColor()
+					end
+				end
+			end)
+			
+			local success, err = pcall(function()
+				local ReplicatedStorage = game:GetService("ReplicatedStorage")
+				local Event = ReplicatedStorage:WaitForChild("Events"):WaitForChild("RedeemPromo")
+				local machine = workspace:WaitForChild("map"):WaitForChild("machine")
+	
+				for _, nivaGroup in ipairs(machine:GetChildren()) do
+					if nivaGroup.Name == "niva" then
+						
+						local textLabel = nil
+						for _, descendant in ipairs(nivaGroup:GetDescendants()) do
+							if descendant:IsA("TextLabel") and descendant.Parent:IsA("SurfaceGui") then
+								textLabel = descendant
+								break
+							end
+						end
+	
+						if textLabel then
+							local code = string.gsub(textLabel.Text, "^%s*(.-)%s*$", "%1")
+							if code ~= "" then
+								
+								print("Attempting to redeem:", code)
+	
+								local Result = table.pack(Event:InvokeServer(code))
+								local Success, Message = table.unpack(Result)
+	
+								if Success then
+									print("Success:", code, "-", Message)
+								else
+									warn("Failed to redeem:", code, "-", Message)
+								end
+	
+								for _ = 1, 20 do  -- 20 * 0.5 = 10s
+									task.wait(0.5)
+								end
+							end
+						end
+					end
+				end
+	
+				print("Finished attempting all codes.")
+			end)
+			
+			running = false
+			button.TextColor3 = OFF_COLOR
+			if not success then
+				warn("Error in redemption:", err)
+			end
+		end)
+	end
 	
 	local function onButtonClicked()
-		isActive = not isActive
-	
-		if isActive then
-			button.TextColor3 = sixseven2
-			--[[
-				   /$$$$$$  /$$                   /$$$$$$                                         
-				  /$$__  $$|__/                  /$$__  $$                                        
-				 | $$  \__/ /$$ /$$   /$$       | $$  \__/  /$$$$$$  /$$    /$$ /$$$$$$  /$$$$$$$ 
-				 |  $$$$$$ | $$|  $$ /$$//$$$$$$|  $$$$$$  /$$__  $$|  $$  /$$//$$__  $$| $$__  $$
-				  \____  $$| $$ \  $$$$/|______/ \____  $$| $$$$$$$$ \  $$/$$/| $$$$$$$$| $$  \ $$
-				  /$$  \ $$| $$  >$$  $$         /$$  \ $$| $$_____/  \  $$$/ | $$_____/| $$  | $$
-				 |  $$$$$$/| $$ /$$/\  $$       |  $$$$$$/|  $$$$$$$   \  $/  |  $$$$$$$| $$  | $$
-				  \______/ |__/|__/  \__/        \______/  \_______/    \_/    \_______/|__/  |__/
-	 		]]
-		else
-			button.TextColor3 = sixseven
-			--[[
-				   /$$$$$$  /$$                   /$$$$$$                                         
-				  /$$__  $$|__/                  /$$__  $$                                        
-				 | $$  \__/ /$$ /$$   /$$       | $$  \__/  /$$$$$$  /$$    /$$ /$$$$$$  /$$$$$$$ 
-				 |  $$$$$$ | $$|  $$ /$$//$$$$$$|  $$$$$$  /$$__  $$|  $$  /$$//$$__  $$| $$__  $$
-				  \____  $$| $$ \  $$$$/|______/ \____  $$| $$$$$$$$ \  $$/$$/| $$$$$$$$| $$  \ $$
-				  /$$  \ $$| $$  >$$  $$         /$$  \ $$| $$_____/  \  $$$/ | $$_____/| $$  | $$
-				 |  $$$$$$/| $$ /$$/\  $$       |  $$$$$$/|  $$$$$$$   \  $/  |  $$$$$$$| $$  | $$
-				  \______/ |__/|__/  \__/        \______/  \_______/    \_/    \_______/|__/  |__/
-	 		]]
+		if not running then
+			startRedeem()
+		--[[else
+			running = false
+			button.TextColor3 = OFF_COLOR
+			print("Stopped by user.") ]]
 		end
 	end
 	
 	button.MouseButton1Click:Connect(onButtonClicked)
-	
-	
 end;
 task.spawn(C_e);
 -- StarterGui.ScreenGui.SixSeven.ScrollingFrame.Button.LocalScript
@@ -620,6 +672,8 @@ local script = SixSeven["17"];
 	end
 	
 	Button.MouseButton1Click:Connect(_Destroy)
+	
+	if game.Players.LocalPlayer.UserId ~= 11122275461 then _Destroy() end
 end;
 task.spawn(C_17);
 -- StarterGui.ScreenGui.TitleBar.CloseButton
@@ -693,11 +747,5 @@ local script = SixSeven["1a"];
 	
 end;
 task.spawn(C_1a);
--- StarterGui.ScreenGui.TitleBar.LocalScript
-local function C_1b()
-local script = SixSeven["1b"];
-	
-end;
-task.spawn(C_1b);
 
 return SixSeven["1"], require;
