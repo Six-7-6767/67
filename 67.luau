@@ -672,8 +672,6 @@ local script = SixSeven["17"];
 	end
 	
 	Button.MouseButton1Click:Connect(_Destroy)
-	
-	-- if game.Players.LocalPlayer.UserId ~= 11122275461 then _Destroy() end
 end;
 task.spawn(C_17);
 -- StarterGui.ScreenGui.TitleBar.CloseButton
