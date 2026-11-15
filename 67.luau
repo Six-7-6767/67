@@ -7,467 +7,231 @@ db   8D   .88.   .8P  Y8.        db   8D 88.      `8bd8'  88.     88  V888
 `8888Y' Y888888P YP    YP        `8888Y' Y88888P    YP    Y88888P VP   V8P    (Six-Seven)
 ]]--
 
--- Instances: 43 | Scripts: 13 | Modules: 0 | Tags: 0
+-- Instances: 23 | Scripts: 8 | Modules: 0 | Tags: 0
 local SixSeven = {};
 
--- StarterGui.SixSevenGUI
-SixSeven["1"] = Instance.new("Folder", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
-SixSeven["1"]["Name"] = [[SixSevenGUI]];
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67
+SixSeven["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+SixSeven["1"]["Name"] = [[SixSeven67]];
+SixSeven["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
 
 
--- StarterGui.SixSevenGUI.Verify6767
-SixSeven["2"] = Instance.new("ScreenGui", SixSeven["1"]);
-SixSeven["2"]["IgnoreGuiInset"] = true;
-SixSeven["2"]["Enabled"] = false;
-SixSeven["2"]["ScreenInsets"] = Enum.ScreenInsets.DeviceSafeInsets;
-SixSeven["2"]["Name"] = [[Verify6767]];
-SixSeven["2"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven
+SixSeven["2"] = Instance.new("Frame", SixSeven["1"]);
+SixSeven["2"]["BorderSizePixel"] = 0;
+SixSeven["2"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
+SixSeven["2"]["Size"] = UDim2.new(0.15664, 0, 0.43403, 0);
+SixSeven["2"]["Position"] = UDim2.new(0.64534, 0, 0.24479, 0);
+SixSeven["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["2"]["Name"] = [[SixSeven]];
 
 
--- StarterGui.SixSevenGUI.Verify6767.Background
-SixSeven["3"] = Instance.new("Frame", SixSeven["2"]);
-SixSeven["3"]["BorderSizePixel"] = 0;
-SixSeven["3"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
-SixSeven["3"]["Size"] = UDim2.new(1, 0, 1, 0);
-SixSeven["3"]["Position"] = UDim2.new(-0.00003, 0, 0, 0);
-SixSeven["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["3"]["Name"] = [[Background]];
-SixSeven["3"]["BackgroundTransparency"] = 0.35;
-
-
--- StarterGui.SixSevenGUI.Verify6767.SixSeven
-SixSeven["4"] = Instance.new("Frame", SixSeven["2"]);
-SixSeven["4"]["BorderSizePixel"] = 0;
-SixSeven["4"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
-SixSeven["4"]["Size"] = UDim2.new(0.43468, 0, 0.49479, 0);
-SixSeven["4"]["Position"] = UDim2.new(0.28193, 0, 0.25174, 0);
-SixSeven["4"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["4"]["Name"] = [[SixSeven]];
-
-
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.UICorner
-SixSeven["5"] = Instance.new("UICorner", SixSeven["4"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.UICorner
+SixSeven["3"] = Instance.new("UICorner", SixSeven["2"]);
 
 
 
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.Yes
-SixSeven["6"] = Instance.new("TextButton", SixSeven["4"]);
-SixSeven["6"]["TextWrapped"] = true;
-SixSeven["6"]["BorderSizePixel"] = 0;
-SixSeven["6"]["TextSize"] = 14;
-SixSeven["6"]["TextScaled"] = true;
-SixSeven["6"]["TextColor3"] = Color3.fromRGB(41, 187, 0);
-SixSeven["6"]["BackgroundColor3"] = Color3.fromRGB(112, 112, 112);
-SixSeven["6"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["6"]["BackgroundTransparency"] = 0.8;
-SixSeven["6"]["Size"] = UDim2.new(0.43468, 0, 0.31743, 0);
-SixSeven["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["6"]["Text"] = [[Yes]];
-SixSeven["6"]["Name"] = [[Yes]];
-SixSeven["6"]["Position"] = UDim2.new(0.51887, 0, 0.61825, 0);
-
-
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.Yes.LocalScript
-SixSeven["7"] = Instance.new("LocalScript", SixSeven["6"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.UIShadow
+SixSeven["4"] = Instance.new("UIShadow", SixSeven["2"]);
 
 
 
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.Yes.UICorner
-SixSeven["8"] = Instance.new("UICorner", SixSeven["6"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame
+SixSeven["5"] = Instance.new("ScrollingFrame", SixSeven["2"]);
+SixSeven["5"]["Active"] = true;
+SixSeven["5"]["BorderSizePixel"] = 0;
+SixSeven["5"]["CanvasSize"] = UDim2.new(0, 0, 0, 380);
+SixSeven["5"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["5"]["Size"] = UDim2.new(1, 0, 0.8, 0);
+SixSeven["5"]["ScrollBarImageColor3"] = Color3.fromRGB(75, 75, 75);
+SixSeven["5"]["Position"] = UDim2.new(0, 0, 0.2, 0);
+SixSeven["5"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["5"]["ScrollBarThickness"] = 0;
+SixSeven["5"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.UIListLayout
+SixSeven["6"] = Instance.new("UIListLayout", SixSeven["5"]);
+SixSeven["6"]["Padding"] = UDim.new(0, 5);
+SixSeven["6"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
+
+
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.SpamChat
+SixSeven["7"] = Instance.new("TextButton", SixSeven["5"]);
+SixSeven["7"]["TextWrapped"] = true;
+SixSeven["7"]["BorderSizePixel"] = 0;
+SixSeven["7"]["TextSize"] = 14;
+SixSeven["7"]["TextScaled"] = true;
+SixSeven["7"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
+SixSeven["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["7"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SixSeven["7"]["BackgroundTransparency"] = 1;
+SixSeven["7"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
+SixSeven["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["7"]["Text"] = [[Spam]];
+SixSeven["7"]["Name"] = [[SpamChat]];
+
+
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.SpamChat.LocalScript
+SixSeven["8"] = Instance.new("LocalScript", SixSeven["7"]);
 
 
 
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.UIShadow
-SixSeven["9"] = Instance.new("UIShadow", SixSeven["4"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.Uncuff
+SixSeven["9"] = Instance.new("TextButton", SixSeven["5"]);
+SixSeven["9"]["TextWrapped"] = true;
+SixSeven["9"]["BorderSizePixel"] = 0;
+SixSeven["9"]["TextSize"] = 14;
+SixSeven["9"]["TextScaled"] = true;
+SixSeven["9"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
+SixSeven["9"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SixSeven["9"]["BackgroundTransparency"] = 1;
+SixSeven["9"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
+SixSeven["9"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["9"]["Text"] = [[Uncuff]];
+SixSeven["9"]["Name"] = [[Uncuff]];
+
+
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.Uncuff.LocalScript
+SixSeven["a"] = Instance.new("LocalScript", SixSeven["9"]);
 
 
 
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.No
-SixSeven["a"] = Instance.new("TextButton", SixSeven["4"]);
-SixSeven["a"]["TextWrapped"] = true;
-SixSeven["a"]["BorderSizePixel"] = 0;
-SixSeven["a"]["TextSize"] = 14;
-SixSeven["a"]["TextScaled"] = true;
-SixSeven["a"]["TextColor3"] = Color3.fromRGB(187, 0, 4);
-SixSeven["a"]["BackgroundColor3"] = Color3.fromRGB(112, 112, 112);
-SixSeven["a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["a"]["BackgroundTransparency"] = 0.8;
-SixSeven["a"]["Size"] = UDim2.new(0.43468, 0, 0.31743, 0);
-SixSeven["a"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["a"]["Text"] = [[No]];
-SixSeven["a"]["Name"] = [[No]];
-SixSeven["a"]["Position"] = UDim2.new(0.0468, 0, 0.61825, 0);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.Anti AFK
+SixSeven["b"] = Instance.new("TextButton", SixSeven["5"]);
+SixSeven["b"]["TextWrapped"] = true;
+SixSeven["b"]["BorderSizePixel"] = 0;
+SixSeven["b"]["TextSize"] = 14;
+SixSeven["b"]["TextScaled"] = true;
+SixSeven["b"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
+SixSeven["b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SixSeven["b"]["BackgroundTransparency"] = 1;
+SixSeven["b"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
+SixSeven["b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["b"]["Text"] = [[AntiAFK]];
+SixSeven["b"]["Name"] = [[Anti AFK]];
 
 
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.No.LocalScript
-SixSeven["b"] = Instance.new("LocalScript", SixSeven["a"]);
-
-
-
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.No.UICorner
-SixSeven["c"] = Instance.new("UICorner", SixSeven["a"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.Anti AFK.LocalScript
+SixSeven["c"] = Instance.new("LocalScript", SixSeven["b"]);
 
 
 
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.TextLabel
-SixSeven["d"] = Instance.new("TextLabel", SixSeven["4"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.RedeemCodes
+SixSeven["d"] = Instance.new("TextButton", SixSeven["5"]);
 SixSeven["d"]["TextWrapped"] = true;
 SixSeven["d"]["BorderSizePixel"] = 0;
 SixSeven["d"]["TextSize"] = 14;
 SixSeven["d"]["TextScaled"] = true;
+SixSeven["d"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
 SixSeven["d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-SixSeven["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
 SixSeven["d"]["BackgroundTransparency"] = 1;
-SixSeven["d"]["RichText"] = true;
-SixSeven["d"]["Size"] = UDim2.new(0, 555, 0, 169);
+SixSeven["d"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
 SixSeven["d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["d"]["Text"] = [[Watch an ad to unlock the script?]];
+SixSeven["d"]["Text"] = [[Promocode]];
+SixSeven["d"]["Name"] = [[RedeemCodes]];
 
 
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.Copy
-SixSeven["e"] = Instance.new("TextButton", SixSeven["4"]);
-SixSeven["e"]["TextWrapped"] = true;
-SixSeven["e"]["BorderSizePixel"] = 0;
-SixSeven["e"]["TextSize"] = 14;
-SixSeven["e"]["TextScaled"] = true;
-SixSeven["e"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["e"]["BackgroundColor3"] = Color3.fromRGB(112, 112, 112);
-SixSeven["e"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["e"]["BackgroundTransparency"] = 0.8;
-SixSeven["e"]["Size"] = UDim2.new(0.90675, 0, 0.31743, 0);
-SixSeven["e"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["e"]["Text"] = [[Copy link]];
-SixSeven["e"]["Name"] = [[Copy]];
-SixSeven["e"]["Visible"] = false;
-SixSeven["e"]["Position"] = UDim2.new(0.0468, 0, 0.61825, 0);
-
-
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.Copy.LocalScript
-SixSeven["f"] = Instance.new("LocalScript", SixSeven["e"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.RedeemCodes.LocalScript
+SixSeven["e"] = Instance.new("LocalScript", SixSeven["d"]);
 
 
 
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.Copy.UICorner
-SixSeven["10"] = Instance.new("UICorner", SixSeven["e"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.HideButtons
+SixSeven["f"] = Instance.new("TextButton", SixSeven["5"]);
+SixSeven["f"]["TextWrapped"] = true;
+SixSeven["f"]["BorderSizePixel"] = 0;
+SixSeven["f"]["TextSize"] = 14;
+SixSeven["f"]["TextScaled"] = true;
+SixSeven["f"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
+SixSeven["f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SixSeven["f"]["BackgroundTransparency"] = 1;
+SixSeven["f"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
+SixSeven["f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["f"]["Text"] = [[Hide]];
+SixSeven["f"]["Name"] = [[HideButtons]];
+
+
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.HideButtons.LocalScript
+SixSeven["10"] = Instance.new("LocalScript", SixSeven["f"]);
 
 
 
--- StarterGui.SixSevenGUI.SixSeven67
-SixSeven["11"] = Instance.new("ScreenGui", SixSeven["1"]);
-SixSeven["11"]["Name"] = [[SixSeven67]];
-SixSeven["11"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.Spam2
+SixSeven["11"] = Instance.new("TextButton", SixSeven["5"]);
+SixSeven["11"]["TextWrapped"] = true;
+SixSeven["11"]["BorderSizePixel"] = 0;
+SixSeven["11"]["TextSize"] = 14;
+SixSeven["11"]["TextScaled"] = true;
+SixSeven["11"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
+SixSeven["11"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SixSeven["11"]["BackgroundTransparency"] = 1;
+SixSeven["11"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
+SixSeven["11"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["11"]["Text"] = [[Spam2]];
+SixSeven["11"]["Name"] = [[Spam2]];
 
 
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven
-SixSeven["12"] = Instance.new("Frame", SixSeven["11"]);
-SixSeven["12"]["BorderSizePixel"] = 0;
-SixSeven["12"]["BackgroundColor3"] = Color3.fromRGB(25, 25, 25);
-SixSeven["12"]["Size"] = UDim2.new(0.15664, 0, 0.43403, 0);
-SixSeven["12"]["Position"] = UDim2.new(0.64534, 0, 0.24479, 0);
-SixSeven["12"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["12"]["Name"] = [[SixSeven]];
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.UICorner
-SixSeven["13"] = Instance.new("UICorner", SixSeven["12"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.UIShadow
-SixSeven["14"] = Instance.new("UIShadow", SixSeven["12"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.Spam2.LocalScript
+SixSeven["12"] = Instance.new("LocalScript", SixSeven["11"]);
 
 
 
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame
-SixSeven["15"] = Instance.new("ScrollingFrame", SixSeven["12"]);
-SixSeven["15"]["Active"] = true;
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.FindMods
+SixSeven["13"] = Instance.new("TextButton", SixSeven["5"]);
+SixSeven["13"]["TextWrapped"] = true;
+SixSeven["13"]["BorderSizePixel"] = 0;
+SixSeven["13"]["TextSize"] = 14;
+SixSeven["13"]["TextScaled"] = true;
+SixSeven["13"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
+SixSeven["13"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["13"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SixSeven["13"]["BackgroundTransparency"] = 1;
+SixSeven["13"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
+SixSeven["13"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["13"]["Text"] = [[Find]];
+SixSeven["13"]["Name"] = [[FindMods]];
+
+
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.FindMods.LocalScript
+SixSeven["14"] = Instance.new("LocalScript", SixSeven["13"]);
+
+
+
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.TitleBar
+SixSeven["15"] = Instance.new("TextButton", SixSeven["1"]);
+SixSeven["15"]["TextWrapped"] = true;
 SixSeven["15"]["BorderSizePixel"] = 0;
-SixSeven["15"]["CanvasSize"] = UDim2.new(0, 0, 0, 380);
-SixSeven["15"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["15"]["Size"] = UDim2.new(1, 0, 0.8, 0);
-SixSeven["15"]["ScrollBarImageColor3"] = Color3.fromRGB(75, 75, 75);
-SixSeven["15"]["Position"] = UDim2.new(0, 0, 0.2, 0);
+SixSeven["15"]["TextSize"] = 14;
+SixSeven["15"]["TextScaled"] = true;
+SixSeven["15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+SixSeven["15"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+SixSeven["15"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+SixSeven["15"]["Size"] = UDim2.new(0.15664, 0, 0.08681, 0);
 SixSeven["15"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["15"]["ScrollBarThickness"] = 0;
-SixSeven["15"]["BackgroundTransparency"] = 1;
+SixSeven["15"]["Text"] = [[Six-Seven]];
+SixSeven["15"]["Name"] = [[TitleBar]];
+SixSeven["15"]["Position"] = UDim2.new(0.64534, 0, 0.24479, 0);
 
 
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.UIListLayout
-SixSeven["16"] = Instance.new("UIListLayout", SixSeven["15"]);
-SixSeven["16"]["Padding"] = UDim.new(0, 5);
-SixSeven["16"]["SortOrder"] = Enum.SortOrder.LayoutOrder;
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.SpamChat
-SixSeven["17"] = Instance.new("TextButton", SixSeven["15"]);
-SixSeven["17"]["TextWrapped"] = true;
-SixSeven["17"]["BorderSizePixel"] = 0;
-SixSeven["17"]["TextSize"] = 14;
-SixSeven["17"]["TextScaled"] = true;
-SixSeven["17"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
-SixSeven["17"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["17"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["17"]["BackgroundTransparency"] = 1;
-SixSeven["17"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
-SixSeven["17"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["17"]["Text"] = [[Spam]];
-SixSeven["17"]["Name"] = [[SpamChat]];
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.SpamChat.LocalScript
-SixSeven["18"] = Instance.new("LocalScript", SixSeven["17"]);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.TitleBar.UICorner
+SixSeven["16"] = Instance.new("UICorner", SixSeven["15"]);
 
 
 
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Uncuff
-SixSeven["19"] = Instance.new("TextButton", SixSeven["15"]);
-SixSeven["19"]["TextWrapped"] = true;
-SixSeven["19"]["BorderSizePixel"] = 0;
-SixSeven["19"]["TextSize"] = 14;
-SixSeven["19"]["TextScaled"] = true;
-SixSeven["19"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
-SixSeven["19"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["19"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["19"]["BackgroundTransparency"] = 1;
-SixSeven["19"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
-SixSeven["19"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["19"]["Text"] = [[Uncuff]];
-SixSeven["19"]["Name"] = [[Uncuff]];
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.TitleBar.CloseButton
+SixSeven["17"] = Instance.new("LocalScript", SixSeven["15"]);
+SixSeven["17"]["Name"] = [[CloseButton]];
 
 
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Uncuff.LocalScript
-SixSeven["1a"] = Instance.new("LocalScript", SixSeven["19"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Anti AFK
-SixSeven["1b"] = Instance.new("TextButton", SixSeven["15"]);
-SixSeven["1b"]["TextWrapped"] = true;
-SixSeven["1b"]["BorderSizePixel"] = 0;
-SixSeven["1b"]["TextSize"] = 14;
-SixSeven["1b"]["TextScaled"] = true;
-SixSeven["1b"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
-SixSeven["1b"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["1b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["1b"]["BackgroundTransparency"] = 1;
-SixSeven["1b"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
-SixSeven["1b"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["1b"]["Text"] = [[AntiAFK]];
-SixSeven["1b"]["Name"] = [[Anti AFK]];
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Anti AFK.LocalScript
-SixSeven["1c"] = Instance.new("LocalScript", SixSeven["1b"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.RedeemCodes
-SixSeven["1d"] = Instance.new("TextButton", SixSeven["15"]);
-SixSeven["1d"]["TextWrapped"] = true;
-SixSeven["1d"]["BorderSizePixel"] = 0;
-SixSeven["1d"]["TextSize"] = 14;
-SixSeven["1d"]["TextScaled"] = true;
-SixSeven["1d"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
-SixSeven["1d"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["1d"]["BackgroundTransparency"] = 1;
-SixSeven["1d"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
-SixSeven["1d"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["1d"]["Text"] = [[Promocode]];
-SixSeven["1d"]["Name"] = [[RedeemCodes]];
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.RedeemCodes.LocalScript
-SixSeven["1e"] = Instance.new("LocalScript", SixSeven["1d"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.HideButtons
-SixSeven["1f"] = Instance.new("TextButton", SixSeven["15"]);
-SixSeven["1f"]["TextWrapped"] = true;
-SixSeven["1f"]["BorderSizePixel"] = 0;
-SixSeven["1f"]["TextSize"] = 14;
-SixSeven["1f"]["TextScaled"] = true;
-SixSeven["1f"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
-SixSeven["1f"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["1f"]["BackgroundTransparency"] = 1;
-SixSeven["1f"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
-SixSeven["1f"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["1f"]["Text"] = [[Hide]];
-SixSeven["1f"]["Name"] = [[HideButtons]];
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.HideButtons.LocalScript
-SixSeven["20"] = Instance.new("LocalScript", SixSeven["1f"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Button
-SixSeven["21"] = Instance.new("TextButton", SixSeven["15"]);
-SixSeven["21"]["TextWrapped"] = true;
-SixSeven["21"]["BorderSizePixel"] = 0;
-SixSeven["21"]["TextSize"] = 14;
-SixSeven["21"]["TextScaled"] = true;
-SixSeven["21"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
-SixSeven["21"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["21"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["21"]["BackgroundTransparency"] = 1;
-SixSeven["21"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
-SixSeven["21"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["21"]["Name"] = [[Button]];
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Button.LocalScript
-SixSeven["22"] = Instance.new("LocalScript", SixSeven["21"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Button
-SixSeven["23"] = Instance.new("TextButton", SixSeven["15"]);
-SixSeven["23"]["TextWrapped"] = true;
-SixSeven["23"]["BorderSizePixel"] = 0;
-SixSeven["23"]["TextSize"] = 14;
-SixSeven["23"]["TextScaled"] = true;
-SixSeven["23"]["TextColor3"] = Color3.fromRGB(153, 153, 153);
-SixSeven["23"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["23"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["23"]["BackgroundTransparency"] = 1;
-SixSeven["23"]["Size"] = UDim2.new(1, 0, 0.13158, 0);
-SixSeven["23"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["23"]["Name"] = [[Button]];
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Button.LocalScript
-SixSeven["24"] = Instance.new("LocalScript", SixSeven["23"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.DebugButton (Temporary)
-SixSeven["25"] = Instance.new("TextButton", SixSeven["12"]);
-SixSeven["25"]["TextWrapped"] = true;
-SixSeven["25"]["BorderSizePixel"] = 0;
-SixSeven["25"]["TextSize"] = 14;
-SixSeven["25"]["TextScaled"] = true;
-SixSeven["25"]["TextColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["25"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
-SixSeven["25"]["Size"] = UDim2.new(0.835, 0, 0.268, 0);
-SixSeven["25"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["25"]["Text"] = [[Close]];
-SixSeven["25"]["Name"] = [[DebugButton (Temporary)]];
-SixSeven["25"]["Position"] = UDim2.new(-2.31, 0, -0.184, 0);
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.DebugButton (Temporary).UICorner
-SixSeven["26"] = Instance.new("UICorner", SixSeven["25"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.DebugButton (Temporary).LocalScript
-SixSeven["27"] = Instance.new("LocalScript", SixSeven["25"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.TitleBar
-SixSeven["28"] = Instance.new("TextButton", SixSeven["11"]);
-SixSeven["28"]["TextWrapped"] = true;
-SixSeven["28"]["BorderSizePixel"] = 0;
-SixSeven["28"]["TextSize"] = 14;
-SixSeven["28"]["TextScaled"] = true;
-SixSeven["28"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
-SixSeven["28"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["28"]["FontFace"] = Font.new([[rbxasset://fonts/families/Ubuntu.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
-SixSeven["28"]["Size"] = UDim2.new(0.15664, 0, 0.08681, 0);
-SixSeven["28"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
-SixSeven["28"]["Text"] = [[Six-Seven]];
-SixSeven["28"]["Name"] = [[TitleBar]];
-SixSeven["28"]["Position"] = UDim2.new(0.64534, 0, 0.24479, 0);
-
-
--- StarterGui.SixSevenGUI.SixSeven67.TitleBar.UICorner
-SixSeven["29"] = Instance.new("UICorner", SixSeven["28"]);
-
-
-
--- StarterGui.SixSevenGUI.SixSeven67.TitleBar.CloseButton
-SixSeven["2a"] = Instance.new("LocalScript", SixSeven["28"]);
-SixSeven["2a"]["Name"] = [[CloseButton]];
-
-
--- StarterGui.SixSevenGUI.Whitelist
-SixSeven["2b"] = Instance.new("LocalScript", SixSeven["1"]);
-SixSeven["2b"]["Name"] = [[Whitelist]];
-
-
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.Yes.LocalScript
-local function C_7()
-local script = SixSeven["7"];
-	--!nocheck
-	
-	local function Button()
-		local text67 = script.Parent.Parent.TextLabel.Text
-		local link = "_"
-		if type(setclipboard) == "function" then
-			setclipboard(link)
-		elseif type(toclipboard) == "function" then
-			toclipboard(link)
-		else
-			script.Parent.Parent.TextLabel.Text = "Couldn't copy link."
-			wait(1.5)
-			script.Parent.Parent.TextLabel.Text = text67
-			return
-		end
-		script.Parent.Parent.TextLabel.Text = "The link copied to clipboard."
-		script.Parent.Parent.Copy.Visible = true
-		script.Parent.Parent.No:Destroy()
-		script.Parent.Parent.Yes:Destroy()
-	end
-	
-	script.Parent.MouseButton1Click:Connect(Button)
-end;
-task.spawn(C_7);
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.No.LocalScript
-local function C_b()
-local script = SixSeven["b"];
-	local function Button()
-		script.Parent.Parent.Parent.Parent.SixSeven67.Enabled = true
-		script.Parent.Parent.Parent:Destroy()
-	end
-	
-	script.Parent.MouseButton1Click:Connect(Button)
-end;
-task.spawn(C_b);
--- StarterGui.SixSevenGUI.Verify6767.SixSeven.Copy.LocalScript
-local function C_f()
-local script = SixSeven["f"];
-	--!nocheck
-	
-	local function Button()
-		local text67 = script.Parent.Parent.TextLabel.Text
-		local link = "_"
-		if type(setclipboard) == "function" then
-			setclipboard(link)
-		elseif type(toclipboard) == "function" then
-			toclipboard(link)
-		else
-			script.Parent.Parent.TextLabel.Text = "Couldn't copy link."
-			wait(1.5)
-			script.Parent.Parent.TextLabel.Text = text67
-			return
-		end
-		script.Parent.Parent.TextLabel.Text = "The link copied to clipboard."
-	end
-	
-	script.Parent.MouseButton1Click:Connect(Button)
-	
-	
-end;
-task.spawn(C_f);
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.SpamChat.LocalScript
-local function C_18()
-local script = SixSeven["18"];
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.SpamChat.LocalScript
+local function C_8()
+local script = SixSeven["8"];
 	local button = script.Parent
 	local isActive = false
 	local sixseven2 = Color3.fromRGB(228, 228, 228)
@@ -527,7 +291,7 @@ local script = SixSeven["18"];
 				end)
 			else
 				Event:FireServer("You didn't write anything yet.")
-				isActive = false      -- don't start the loop
+				isActive = false      -- dont start the loop
 				button.TextColor3 = sixseven
 			end
 		else
@@ -535,10 +299,10 @@ local script = SixSeven["18"];
 		end
 	end)
 end;
-task.spawn(C_18);
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Uncuff.LocalScript
-local function C_1a()
-local script = SixSeven["1a"];
+task.spawn(C_8);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.Uncuff.LocalScript
+local function C_a()
+local script = SixSeven["a"];
 	local button = script.Parent
 	local isActive = false
 	local sixseven2 = Color3.fromRGB(228, 228, 228)
@@ -564,10 +328,10 @@ local script = SixSeven["1a"];
 	
 	
 end;
-task.spawn(C_1a);
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Anti AFK.LocalScript
-local function C_1c()
-local script = SixSeven["1c"];
+task.spawn(C_a);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.Anti AFK.LocalScript
+local function C_c()
+local script = SixSeven["c"];
 	local button = script.Parent
 	local isActive = false
 	local sixseven2 = Color3.fromRGB(228, 228, 228)
@@ -641,10 +405,10 @@ local script = SixSeven["1c"];
 	
 	button.MouseButton1Click:Connect(onButtonClicked)
 end;
-task.spawn(C_1c);
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.RedeemCodes.LocalScript
-local function C_1e()
-local script = SixSeven["1e"];
+task.spawn(C_c);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.RedeemCodes.LocalScript
+local function C_e()
+local script = SixSeven["e"];
 	local HttpService = game:GetService("HttpService")
 	local ReplicatedStorage = game:GetService("ReplicatedStorage")
 	
@@ -808,10 +572,10 @@ local script = SixSeven["1e"];
 	
 	button.MouseButton1Click:Connect(onButtonClicked)
 end;
-task.spawn(C_1e);
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.HideButtons.LocalScript
-local function C_20()
-local script = SixSeven["20"];
+task.spawn(C_e);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.HideButtons.LocalScript
+local function C_10()
+local script = SixSeven["10"];
 	local Players = game:GetService("Players")
 	local LocalPlayer = Players.LocalPlayer
 	local PlayerGui = LocalPlayer:WaitForChild("PlayerGui")
@@ -856,112 +620,148 @@ local script = SixSeven["20"];
 	
 	button.MouseButton1Click:Connect(onButtonClicked)
 end;
-task.spawn(C_20);
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Button.LocalScript
-local function C_22()
-local script = SixSeven["22"];
+task.spawn(C_10);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.Spam2.LocalScript
+local function C_12()
+local script = SixSeven["12"];
 	local button = script.Parent
 	local isActive = false
 	local sixseven2 = Color3.fromRGB(228, 228, 228)
 	local sixseven = Color3.fromRGB(152, 152, 152)
 	button.TextColor3 = sixseven
 	
-	local function onButtonClicked()
+	local waitTime = 0.5 -- delay
+	local UserInputService = game:GetService("UserInputService")
+	local Event = game:GetService("ReplicatedStorage").Network.Comms.Input
+	local Players = game:GetService("Players")
+	local localPlayer = Players.LocalPlayer
+	
+	local lastMessage = nil
+	
+	Event.OnClientEvent:Connect(function(formattedText, rawMessage, sender)
+		if sender == localPlayer then
+			if not isActive then
+				lastMessage = rawMessage
+			end
+		end
+	end)
+	
+	
+	button.MouseButton1Click:Connect(function()
 		isActive = not isActive
 	
 		if isActive then
-			button.TextColor3 = sixseven2
-			--[[
-				   /$$$$$$  /$$                   /$$$$$$                                         
-				  /$$__  $$|__/                  /$$__  $$                                        
-				 | $$  \__/ /$$ /$$   /$$       | $$  \__/  /$$$$$$  /$$    /$$ /$$$$$$  /$$$$$$$ 
-				 |  $$$$$$ | $$|  $$ /$$//$$$$$$|  $$$$$$  /$$__  $$|  $$  /$$//$$__  $$| $$__  $$
-				  \____  $$| $$ \  $$$$/|______/ \____  $$| $$$$$$$$ \  $$/$$/| $$$$$$$$| $$  \ $$
-				  /$$  \ $$| $$  >$$  $$         /$$  \ $$| $$_____/  \  $$$/ | $$_____/| $$  | $$
-				 |  $$$$$$/| $$ /$$/\  $$       |  $$$$$$/|  $$$$$$$   \  $/  |  $$$$$$$| $$  | $$
-				  \______/ |__/|__/  \__/        \______/  \_______/    \_/    \_______/|__/  |__/
-	 		]]
+			if lastMessage then
+				button.TextColor3 = sixseven2
+	
+				task.spawn(function()
+					while isActive do
+						game:GetService("ReplicatedStorage"):WaitForChild("Packages"):WaitForChild("QuickNet"):WaitForChild("QuickNetRemote"):FireServer(unpack(buffer.fromstring("\001\000\001\005!card")))
+	
+						task.wait(waitTime)
+						--[[
+						if UserInputService:IsKeyDown(Enum.KeyCode.N) then
+							warn("Loop broken")
+							isActive = false
+							button.TextColor3 = sixseven
+							break
+						end
+						]]--
+					end
+				end)
+			else
+				Event:FireServer("You didn't write anything yet.")
+				isActive = false      -- dont start the loop
+				button.TextColor3 = sixseven
+			end
 		else
 			button.TextColor3 = sixseven
-			--[[
-				   /$$$$$$  /$$                   /$$$$$$                                         
-				  /$$__  $$|__/                  /$$__  $$                                        
-				 | $$  \__/ /$$ /$$   /$$       | $$  \__/  /$$$$$$  /$$    /$$ /$$$$$$  /$$$$$$$ 
-				 |  $$$$$$ | $$|  $$ /$$//$$$$$$|  $$$$$$  /$$__  $$|  $$  /$$//$$__  $$| $$__  $$
-				  \____  $$| $$ \  $$$$/|______/ \____  $$| $$$$$$$$ \  $$/$$/| $$$$$$$$| $$  \ $$
-				  /$$  \ $$| $$  >$$  $$         /$$  \ $$| $$_____/  \  $$$/ | $$_____/| $$  | $$
-				 |  $$$$$$/| $$ /$$/\  $$       |  $$$$$$/|  $$$$$$$   \  $/  |  $$$$$$$| $$  | $$
-				  \______/ |__/|__/  \__/        \______/  \_______/    \_/    \_______/|__/  |__/
-	 		]]
 		end
-	end
-	
-	button.MouseButton1Click:Connect(onButtonClicked)
-	
-	
+	end)
 end;
-task.spawn(C_22);
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.ScrollingFrame.Button.LocalScript
-local function C_24()
-local script = SixSeven["24"];
+task.spawn(C_12);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.SixSeven.ScrollingFrame.FindMods.LocalScript
+local function C_14()
+local script = SixSeven["14"];
 	local button = script.Parent
 	local isActive = false
-	local sixseven2 = Color3.fromRGB(228, 228, 228)
-	local sixseven = Color3.fromRGB(152, 152, 152)
-	button.TextColor3 = sixseven
 	
-	local function onButtonClicked()
-		isActive = not isActive
+	local name67 = script.Parent.Parent.Parent.Parent.TitleBar.Text
 	
-		if isActive then
-			button.TextColor3 = sixseven2
-			--[[
-				   /$$$$$$  /$$                   /$$$$$$                                         
-				  /$$__  $$|__/                  /$$__  $$                                        
-				 | $$  \__/ /$$ /$$   /$$       | $$  \__/  /$$$$$$  /$$    /$$ /$$$$$$  /$$$$$$$ 
-				 |  $$$$$$ | $$|  $$ /$$//$$$$$$|  $$$$$$  /$$__  $$|  $$  /$$//$$__  $$| $$__  $$
-				  \____  $$| $$ \  $$$$/|______/ \____  $$| $$$$$$$$ \  $$/$$/| $$$$$$$$| $$  \ $$
-				  /$$  \ $$| $$  >$$  $$         /$$  \ $$| $$_____/  \  $$$/ | $$_____/| $$  | $$
-				 |  $$$$$$/| $$ /$$/\  $$       |  $$$$$$/|  $$$$$$$   \  $/  |  $$$$$$$| $$  | $$
-				  \______/ |__/|__/  \__/        \______/  \_______/    \_/    \_______/|__/  |__/
-	 		]]
-		else
-			button.TextColor3 = sixseven
-			--[[
-				   /$$$$$$  /$$                   /$$$$$$                                         
-				  /$$__  $$|__/                  /$$__  $$                                        
-				 | $$  \__/ /$$ /$$   /$$       | $$  \__/  /$$$$$$  /$$    /$$ /$$$$$$  /$$$$$$$ 
-				 |  $$$$$$ | $$|  $$ /$$//$$$$$$|  $$$$$$  /$$__  $$|  $$  /$$//$$__  $$| $$__  $$
-				  \____  $$| $$ \  $$$$/|______/ \____  $$| $$$$$$$$ \  $$/$$/| $$$$$$$$| $$  \ $$
-				  /$$  \ $$| $$  >$$  $$         /$$  \ $$| $$_____/  \  $$$/ | $$_____/| $$  | $$
-				 |  $$$$$$/| $$ /$$/\  $$       |  $$$$$$/|  $$$$$$$   \  $/  |  $$$$$$$| $$  | $$
-				  \______/ |__/|__/  \__/        \______/  \_______/    \_/    \_______/|__/  |__/
-	 		]]
+	local activeColor   = Color3.fromRGB(228, 228, 228)
+	local inactiveColor = Color3.fromRGB(152, 152, 152)
+	button.TextColor3 = inactiveColor
+	
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local localPlayer = Players.LocalPlayer
+	local SCAN_INTERVAL = 0.6
+	local lastScan = 0
+	
+	local function isCharacterInvisible(character)
+		if not character then return false end
+		for _, part in ipairs(character:GetDescendants()) do
+			if part:IsA("BasePart") or part:IsA("Decal") then
+				if part.Transparency < 1 and part.LocalTransparencyModifier < 1 then
+					return false
+				end
+			end
 		end
+		return true
 	end
 	
-	button.MouseButton1Click:Connect(onButtonClicked)
-	
-	
-end;
-task.spawn(C_24);
--- StarterGui.SixSevenGUI.SixSeven67.SixSeven.DebugButton (Temporary).LocalScript
-local function C_27()
-local script = SixSeven["27"];
-	local Button = script.Parent
-	local Frame = Button.Parent
-	local GUI = Frame.Parent
-	
-	local function _Destroy()
-		GUI:Destroy()
+	local function getClosestInvisiblePlayer(localRoot)
+		local closestPlayer, closestDistance = nil, math.huge
+		for _, otherPlayer in ipairs(Players:GetPlayers()) do
+			if otherPlayer ~= localPlayer then
+				local otherChar = otherPlayer.Character
+				if otherChar then
+					local otherRoot = otherChar:FindFirstChild("HumanoidRootPart")
+					local otherHumanoid = otherChar:FindFirstChild("Humanoid")
+					if otherRoot and otherHumanoid and otherHumanoid.Health > 0
+						and isCharacterInvisible(otherChar) then
+						local distance = (otherRoot.Position - localRoot.Position).Magnitude
+						if distance < closestDistance then
+							closestDistance = distance
+							closestPlayer = otherPlayer
+						end
+					end
+				end
+			end
+		end
+		return closestPlayer, closestDistance
 	end
 	
-	Button.MouseButton1Click:Connect(_Destroy)
+	RunService.Heartbeat:Connect(function()
+		if not isActive then return end
+	
+		local now = tick()
+		if now - lastScan < SCAN_INTERVAL then return end
+		lastScan = now
+	
+		local char = localPlayer.Character
+		local root = char and char:FindFirstChild("HumanoidRootPart")
+		if not root then return end
+	
+		local closestInvisible, distance = getClosestInvisiblePlayer(root)
+		if closestInvisible then
+			name67 = string.format("Closest invisible player: %s (Distance: %.1f studs)",
+				closestInvisible.Name, distance)
+		else
+			name67 = "No one near"
+		end
+	end)
+	
+	button.MouseButton1Click:Connect(function()
+		isActive = not isActive
+		button.TextColor3 = isActive and activeColor or inactiveColor
+	end)
 end;
-task.spawn(C_27);
--- StarterGui.SixSevenGUI.SixSeven67.TitleBar.CloseButton
-local function C_2a()
-local script = SixSeven["2a"];
+task.spawn(C_14);
+-- StarterGui.jhdsgkjahgkljhdgf.SixSeven67.TitleBar.CloseButton
+local function C_17()
+local script = SixSeven["17"];
 	local UserInputService = game:GetService("UserInputService")
 	
 	local button = script.Parent
@@ -1029,32 +829,6 @@ local script = SixSeven["2a"];
 	end)
 	
 end;
-task.spawn(C_2a);
--- StarterGui.SixSevenGUI.Whitelist
-local function C_2b()
-local script = SixSeven["2b"];
-	local Players = game:GetService("Players")
-	local HttpService = game:GetService("HttpService")
-	
-	local id = Players.LocalPlayer.UserId
-	local display = Players.LocalPlayer.DisplayName
-	
-	local response = request({
-		Url = "https://raw.githubusercontent.com/Six-7-6767/67/refs/heads/main/list.json",
-		Method = "GET"
-	})
-	
-	local list = HttpService:JSONDecode(response.Body)
-	
-	if table.find(list, id) then
-		print(`Hello, {display}!`)
-	else
-		warn(id)
-		script.Parent.SixSeven67.Enabled = false
-		script.Parent.Verify6767.Enabled = true
-	end
-	
-end;
-task.spawn(C_2b);
+task.spawn(C_17);
 
 return SixSeven["1"], require;
